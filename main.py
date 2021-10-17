@@ -5,14 +5,14 @@ from disnake.ext import commands
 
 def get_prifex(bot, msg):
     if msg.author != bot.user:
-        return ['a!', 'A!']
+        return ['pop!', 'pop!']
 
 intents = disnake.Intents().all()
 bot = commands.Bot(command_prefix=get_prifex, case_insensitive=True, intents=intents)
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=disnake.Activity(type=disnake.ActivityType.playing, name="蝦蝦✅ a/help"))
+    await bot.change_presence(activity=disnake.Activity(type=disnake.ActivityType.playing, name="天使⚜️ u/help"))
     print(f"Logged in as: {bot.user.name} - {bot.user.id} / Version: {disnake.__version__}")
 
 
