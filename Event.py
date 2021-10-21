@@ -6,10 +6,10 @@ import disnake
 
 from disnake.ext import commands
 
-class Event(Cog_extension):
+class Event(Cog_Extension):
   @commands.Cog.listener()
   async def on_message(self, msg):
-    if msg.author == '671366378351230996':
+    if msg.content == 'food':
       await msg.channel.send('test')
     
 def setup(bot):
