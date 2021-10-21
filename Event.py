@@ -6,9 +6,9 @@ import disnake
 
 from disnake.ext import commands
 
-clss Event(Cog_extension):
+class Event(Cog_extension):
   @commands.Cog.listener()
-  async def on_message(self,msg):
+  async def on_message(self, msg):
     if msg.author == '671366378351230996':
       await msg.channel.send('test')
     
